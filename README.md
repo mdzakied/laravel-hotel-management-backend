@@ -3,7 +3,73 @@
 
 <p align="center" id="description">Building an ERP System Multi-User for Hotel Management.</p>
 
+<h2>🚀 Requirments</h2>
 
+Here're some of the project's requirments :
+
+Hierarki Tingkat Pengguna :
+1. Superadmin
+    * Menerima atau menolak pendaftaran hotel baru yang diajukan oleh Owner. ✔️
+    * Melihat daftar semua hotel yang telah disetujui. ✔️
+    * Melihat informasi pengguna di semua tingkat (Owner, Admin, dan Staff). ✔️
+  
+2. Owner
+    * Login dan mendaftar. ✔️ 
+    * Mengajukan pendaftaran hotel baru yang ingin dikelola. ✔️
+    * Mendaftarkan Admin untuk hotel yang telah disetujui. ✔️
+    * Melihat daftar hotel yang dimiliki dan informasi masing-masing Admin. ✔️
+  
+3. Admin
+    * Login. ✔️
+    * Mendaftarkan Staff untuk hotel yang dikelola. ✔️
+    * Menetapkan Permission untuk Staff terhadap fitur tertentu. ✔️
+    * Menamai Role tertentu dengan kombinasi Permission tertentu. ✔️
+    * Melihat daftar Staff yang sudah didaftarkan untuk hotelnya. ✔️
+
+4. Staff
+    * Login. ✔️
+    * Mengelola fitur tertentu berdasarkan Permission yang diberikan oleh Admin, 
+    termasuk:
+
+        *  Kelola kamar. ✔️
+        *  Menetapkan harga kamar. ✔️
+        *  Melakukan reservasi. ✔️
+        *  elihat dan mencatat rekap pemasukan. ✔️
+
+
+Deskripsi Fitur Sistem :
+1. Pendaftaran Hotel Baru ✔️
+* Aktor: Owner, Superadmin.
+* Flow:
+    1. Owner mengisi formulir pendaftaran hotel baru (nama hotel, alamat, deskripsi,
+    fasilitas, dll.).
+    2. Superadmin menerima notifikasi dan memutuskan untuk menerima atau
+    menolak pendaftaran.
+    3. Jika disetujui, hotel aktif dan Owner dapat mendaftarkan Admin.
+    4. Jika ditolak, Owner mendapatkan notifikasi dengan alasan penolakan.
+       
+2. Manajemen User ✔️
+* Aktor: Superadmin, Owner, Admin.
+* Flow:
+    1. Superadmin dapat melihat semua pengguna dan hotel dalam sistem.
+    2. Owner dapat mendaftarkan Admin untuk hotel yang dimilikinya.
+    3. Admin dapat mendaftarkan Staff dan menetapkan permissions mereka.
+
+Tugas Pemrograman
+* Buat desain basis data yang mencakup pengguna, hotel, kamar, reservasi,
+roles, dan permissions.
+
+* Implementasikan sistem login dan otorisasi berbasis roles dan permissions.
+Bangun fitur CRUD untuk Superadmin, Owner, Admin, dan Staff sesuai hierarki
+aksesnya.
+Gunakan teknologi berikut:
+    * Backend: Laravel 11 ✔️
+    * Frontend: React.js dan Tailwind
+    * Database: MySQL ✔️
+    * API DOC: OpenApi / Postman ✔️
+* Pengembangan Fitur dan Optimasi Code sangat direkomendasikan 
+
+<br>
 <h2>🧐 Features</h2>
 
 Here're some of the project's best features :
@@ -117,8 +183,8 @@ php artisan serve
   
 Postman :
 * Run Project
-* Open Postman and Import for collections
-* Open Postman and Import for environments
+* Open Postman and Import for collections docs/Hotel Management.postman_collection.json
+* Open Postman and Import for environments docs/Hotel Management.postman_environment.json
 
 
 <h2>💻 Built with</h2>
