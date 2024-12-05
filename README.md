@@ -23,7 +23,7 @@ Hierarki Tingkat Pengguna :
     * Login. ✔️
     * Mendaftarkan Staff untuk hotel yang dikelola. ✔️
     * Menetapkan Permission untuk Staff terhadap fitur tertentu. ✔️
-    * Menamai Role tertentu dengan kombinasi Permission tertentu. ✔️
+    * Menamai Role tertentu dengan kombinasi Permission tertentu. 
     * Melihat daftar Staff yang sudah didaftarkan untuk hotelnya. ✔️
 
 4. Staff
