@@ -3,6 +3,12 @@
 
 <p align="center" id="description">Building an ERP System Multi-User for Hotel Management.</p>
 
+<br>
+<h2 align="center">ERD (Entity-Relationship Diagram)</h2>
+<img width="878" alt="db_hotel_erd" src="https://github.com/user-attachments/assets/9424d89a-b267-46d9-a296-e3718c3e07d6">
+
+<br>
+<br>
 <h2>🚀 Requirments</h2>
 
 Here're some of the project's requirments :
