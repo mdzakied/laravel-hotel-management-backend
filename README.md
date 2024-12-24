@@ -5,7 +5,7 @@
 
 <br>
 <h2 align="center">ERD (Entity-Relationship Diagram)</h2>
-<img width="878" alt="db_hotel_erd" src="https://github.com/user-attachments/assets/9424d89a-b267-46d9-a296-e3718c3e07d6">
+<img width="100%" alt="db_hotel_erd" src="https://github.com/user-attachments/assets/9424d89a-b267-46d9-a296-e3718c3e07d6">
 
 <br>
 <br>
@@ -13,67 +13,34 @@
 
 Here're some of the project's requirments :
 
-Hierarki Tingkat Pengguna :
+User Hierarchy :
+
 1. Superadmin
-    * Menerima atau menolak pendaftaran hotel baru yang diajukan oleh Owner. ✔️
-    * Melihat daftar semua hotel yang telah disetujui. ✔️
-    * Melihat informasi pengguna di semua tingkat (Owner, Admin, dan Staff). ✔️
-  
+   - Accept or reject new hotel registration requests submitted by Owners. ✔️
+   - View a list of all approved hotels. ✔️
+   - View user information at all levels (Owner, Admin, and Staff). ✔️
+
 2. Owner
-    * Login dan mendaftar. ✔️ 
-    * Mengajukan pendaftaran hotel baru yang ingin dikelola. ✔️
-    * Mendaftarkan Admin untuk hotel yang telah disetujui. ✔️
-    * Melihat daftar hotel yang dimiliki dan informasi masing-masing Admin. ✔️
-  
+   - Login and register. ✔️
+   - Submit a new hotel registration request for management. ✔️
+   - Register Admins for the approved hotels. ✔️
+   - View a list of owned hotels and information about each Admin. ✔️
+
 3. Admin
-    * Login. ✔️
-    * Mendaftarkan Staff untuk hotel yang dikelola. ✔️
-    * Menetapkan Permission untuk Staff terhadap fitur tertentu. ✔️
-    * Menamai Role tertentu dengan kombinasi Permission tertentu. 
-    * Melihat daftar Staff yang sudah didaftarkan untuk hotelnya. ✔️
+   - Login. ✔️
+   - Register Staff for the managed hotels. ✔️
+   - Set Permissions for Staff on specific features. ✔️
+   - Name specific Roles with combinations of Permissions. ✔️
+   - View a list of Staff members registered for their hotel. ✔️
 
 4. Staff
-    * Login. ✔️
-    * Mengelola fitur tertentu berdasarkan Permission yang diberikan oleh Admin, 
-    termasuk:
+   - Login. ✔️
+   - Manage specific features based on Permissions granted by Admin, including:
+     - Manage rooms. ✔️
+     - Set room prices. ✔️
+     - Make reservations. ✔️
+     - View and record revenue reports. ✔️
 
-        *  Kelola kamar. ✔️
-        *  Menetapkan harga kamar. ✔️
-        *  Melakukan reservasi. ✔️
-        *  elihat dan mencatat rekap pemasukan. ✔️
-
-
-Deskripsi Fitur Sistem :
-1. Pendaftaran Hotel Baru ✔️
-* Aktor: Owner, Superadmin.
-* Flow:
-    1. Owner mengisi formulir pendaftaran hotel baru (nama hotel, alamat, deskripsi,
-    fasilitas, dll.).
-    2. Superadmin menerima notifikasi dan memutuskan untuk menerima atau
-    menolak pendaftaran.
-    3. Jika disetujui, hotel aktif dan Owner dapat mendaftarkan Admin.
-    4. Jika ditolak, Owner mendapatkan notifikasi dengan alasan penolakan.
-       
-2. Manajemen User ✔️
-* Aktor: Superadmin, Owner, Admin.
-* Flow:
-    1. Superadmin dapat melihat semua pengguna dan hotel dalam sistem.
-    2. Owner dapat mendaftarkan Admin untuk hotel yang dimilikinya.
-    3. Admin dapat mendaftarkan Staff dan menetapkan permissions mereka.
-
-Tugas Pemrograman
-* Buat desain basis data yang mencakup pengguna, hotel, kamar, reservasi,
-roles, dan permissions.
-
-* Implementasikan sistem login dan otorisasi berbasis roles dan permissions.
-Bangun fitur CRUD untuk Superadmin, Owner, Admin, dan Staff sesuai hierarki
-aksesnya.
-Gunakan teknologi berikut:
-    * Backend: Laravel 11 ✔️
-    * Frontend: React.js dan Tailwind
-    * Database: MySQL ✔️
-    * API DOC: OpenApi / Postman ✔️
-* Pengembangan Fitur dan Optimasi Code sangat direkomendasikan 
 
 <br>
 <h2>🧐 Features</h2>
