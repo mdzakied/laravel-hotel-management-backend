@@ -1,7 +1,7 @@
 <h1 align="center" id="title">laravel-hotel-management-backend</h1>
 
 
-<p align="center" id="description">Building an ERP System Multi-User for Hotel Management.</p>
+<p align="center" id="description">RESTful API for ERP System Multi-User for Hotel Management.</p>
 
 <br>
 <h2 align="center">ERD (Entity-Relationship Diagram)</h2>
