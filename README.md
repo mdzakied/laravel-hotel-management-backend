@@ -24,7 +24,7 @@ The **Hotely - Webservice API** is a comprehensive REST API built to manage hote
 - **Backend:** Laravel 11
 - **Database:** MySQL
 - **Security:** Laravel Sanctum for authentication and authorization
-- **Testing:** Postman for API testing and validation
+- **Testing:** Postman for endpoint documentation and testing
 - **API Documentation:** Postman for testing endpoints and generating API documentation
 
 ---
