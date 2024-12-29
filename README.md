@@ -112,8 +112,8 @@ php artisan db:seed --class=SuperadminSeeder
 > Information in command:
 > * Superadmin account initialized (email: superadmin@superadmin.com, pass: password123)
 
-
 <br />
+
 <p>6. Run Project for Development</p>
 
 ```
