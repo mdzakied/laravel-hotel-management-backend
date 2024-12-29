@@ -1,88 +1,38 @@
 <h1 align="center" id="title">laravel-hotel-management-backend</h1>
 
+<p align="center" id="description"><strong>Webservice API for ERP System Multi-User for Hotel Management.</strong></p>
 
-<p align="center" id="description">RESTful API for ERP System Multi-User for Hotel Management.</p>
+<p align="center">
+  A modern and secure REST API designed to handle all aspects of hotel operations, including room bookings, reservations, and customer management.
+</p>
 
-<br>
-<h2 align="center">ERD (Entity-Relationship Diagram)</h2>
+---
+
+## Project Overview 🌟
+
+The **Hotely - Webservice API** is a comprehensive REST API built to manage hotel operations. It supports core functionalities such as:
+
+- **Room Bookings & Reservations 🛏️:** Manage room availability and customer reservations.
+- **Customer Management 👤:** Handle customer data and interactions.
+- **Role-Based Access Control 🔐:** Secure user roles and permissions with Laravel Sanctum.
+- **Secure Authentication & Authorization 🔑:** Ensure safe access control for different user roles.
+
+---
+
+## Technologies Used ⚙️
+
+- **Backend:** Laravel 11
+- **Database:** MySQL
+- **Security:** Laravel Sanctum for authentication and authorization
+- **Testing:** Postman for API testing and validation
+- **API Documentation:** Postman for testing endpoints and generating API documentation
+
+---
+
+<h2>🗂️ ERD (Entity-Relationship Diagram)</h2>
 <img width="100%" alt="db_hotel_erd" src="https://github.com/user-attachments/assets/9424d89a-b267-46d9-a296-e3718c3e07d6">
 
-<br>
-<br>
-<h2>🚀 Requirments</h2>
-
-Here're some of the project's requirments :
-
-User Hierarchy :
-
-1. Superadmin
-   - Accept or reject new hotel registration requests submitted by Owners. ✔️
-   - View a list of all approved hotels. ✔️
-   - View user information at all levels (Owner, Admin, and Staff). ✔️
-
-2. Owner
-   - Login and register. ✔️
-   - Submit a new hotel registration request for management. ✔️
-   - Register Admins for the approved hotels. ✔️
-   - View a list of owned hotels and information about each Admin. ✔️
-
-3. Admin
-   - Login. ✔️
-   - Register Staff for the managed hotels. ✔️
-   - Set Permissions for Staff on specific features. ✔️
-   - Name specific Roles with combinations of Permissions. ✔️
-   - View a list of Staff members registered for their hotel. ✔️
-
-4. Staff
-   - Login. ✔️
-   - Manage specific features based on Permissions granted by Admin, including:
-     - Manage rooms. ✔️
-     - Set room prices. ✔️
-     - Make reservations. ✔️
-     - View and record revenue reports. ✔️
-
-
-<br>
-<h2>🧐 Features</h2>
-
-Here're some of the project's best features :
-
-*  Authentication and Authorization :
-    * Registration Superadmin -> auth 'superadmin' role
-    * Registration Owner -> public
-    * Registration Admin -> auth 'owner' role
-    * Registration Staff -> auth 'admin' role
-    * Login User
-    
-*  CRUD Data :
-    * Users
-        * Get All User with Pagination -> auth 'superadmin' role
-        * Edit permissions in staff role -> auth 'admin' role
-        * Get User with Filter : -> auth 'superadmin' role
-            * Role
-            * Page
-            * Size
-    * Hotels
-        * Add Hotel -> auth 'owner' role
-        * Get All Hotel with Pagination -> auth (data hotel suitable with user) 
-        * Get Hotel with Filter :
-            * Status (pending, denied, approved)
-            * Page
-            * Size
-        * Approve Hotel -> auth 'superadmin' role
-        * Deny Hotel -> auth 'superadmin' role
-        * Register Admin -> auth 'owner' role
-        * Register Staff -> auth 'admin' role
-
-    * Rooms 
-        * Add Room ->  auth 'staff' role and permission 'add_room'
-        * Get All Room by Hotel Id with Pagination -> auth 'staff' role and permission 'view_room' 
-        * Edit Room by Id -> auth 'staff' role and permission 'edit_room'
-     
-    * Reservations 
-        * Add Reservation ->  auth 'staff' role and permission 'add_reservation'
-        * Get All Room by Room Id and Hotel Id with Pagination -> auth 'staff' role and permission 'view_reservation'
-        * Edit Room by Id -> auth 'staff' role and permission 'edit_reservation'
+---
   
 <h2>🛠️ Installation Steps :</h2>
 
@@ -158,13 +108,3 @@ Postman :
 * Run Project
 * Open Postman and Import for collections docs/Hotel Management.postman_collection.json
 * Open Postman and Import for environments docs/Hotel Management.postman_environment.json
-
-
-<h2>💻 Built with</h2>
-
-Technologies used in the project :
-
-*   MySql
-*   Laravel 11
-*   Laravel Sanctum
-*   Postman
