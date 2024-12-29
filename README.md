@@ -8,7 +8,7 @@
 
 ---
 
-## Project Overview 🌟
+## 🌟 Project Overview 
 
 The **Hotely - Webservice API** is a comprehensive REST API built to manage hotel operations. It supports core functionalities such as:
 
@@ -19,7 +19,7 @@ The **Hotely - Webservice API** is a comprehensive REST API built to manage hote
 
 ---
 
-## Technologies Used ⚙️
+## ⚙️ Technologies Used 
 
 - **Backend:** Laravel 11
 - **Database:** MySQL
