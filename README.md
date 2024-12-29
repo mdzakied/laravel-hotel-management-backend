@@ -33,7 +33,18 @@ The **Hotely - Webservice API** is a comprehensive REST API built to manage hote
 <img width="100%" alt="db_hotel_erd" src="https://github.com/user-attachments/assets/9424d89a-b267-46d9-a296-e3718c3e07d6">
 
 ---
+
+<h2>🌐 Api Endpoint</h2>
+
+Here're some of the project's API Endpoint :
+
+<br />
+
+> [!NOTE]  
+> * **Authentication**: Using Bearer token (JWT) for requests requiring authentication.
   
+---
+
 <h2>🛠️ Installation Steps </h2>
 
 <p>1. Clone Repository</p>
