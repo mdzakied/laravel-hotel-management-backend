@@ -41,7 +41,54 @@ Here're some of the project's API Endpoint :
 
 > [!NOTE]  
 > * **Authentication**: Using Bearer token (JWT) for requests requiring authentication.
-  
+
+<br />
+
+<h3>Authentication</h3>
+
+| Endpoint                     | Method | Authentication Required | Description                                    | Request Body                                                                                  | Query Parameters |
+|------------------------------|--------|-------------------------|------------------------------------------------|------------------------------------------------------------------------------------------------|-------------------|
+| `/auth/login`                 | POST   | None                    | Login User                            | `{ "email": "admin@example.com", "password": "admin123" }`                                      | None              |
+| `/auth/register-superadmin`   | POST   | Superadmin              | Register a new Superadmin                      | `{ "name": "Super Admin", "email": "superadmin@example.com", "password": "superadmin123" }`     | None              |
+| `/auth/register-owner`        | POST   | Admin                   | Register a new Owner                          | `{ "name": "Owner", "email": "owner@example.com", "password": "owner123" }`                     | None              |
+| `/auth/register-admin`        | POST   | Admin                   | Register a new Admin                          | `{ "name": "Admin New", "email": "adminNew@example.com", "password": "adminNew123" }`           | None              |
+| `/auth/register-staff`        | POST   | Admin                   | Register a new Staff                          | `{ "name": "Staff", "email": "staff@example.com", "password": "staff123" }`                     | None              |
+| `/auth/logout`                | POST   | Admin                   | Logout                                        | No body                                                                                         | None              |
+<h3>User Management</h3>
+
+| Endpoint                       | Method | Authentication Required | Description                                   | Request Body                                                                                                                                                         | Query Parameters |
+|--------------------------------|--------|-------------------------|-----------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
+| `/users`                       | GET    | Superadmin               | Show all users                                | None                                                                                                                                                                 | `role=admin`, `page=1`, `size=10` |
+| `/users/{userId}/permissions`  | PUT    | Admin                   | Edit permissions for a specific staff member | `{ "permissions": ["add_room", "view_room", "edit_room", "add_reservation", "view_reservation", "edit_reservation"] }`                                                | None              |
+
+
+<h3>Hotel Management</h3>
+
+| Endpoint                                | Method | Authentication Required | Description                                   | Request Body                                                                                                                                                                                                                 | Query Parameters |
+|-----------------------------------------|--------|-------------------------|-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
+| `/hotels`                               | POST   | Owner                   | Add a new hotel                               | `{ "hotel_name": "Hotel Bahari1 x2222", "address": "Jl. Pantai No. 10, Bali", "description": "Hotel dengan pemandangan pantai yang indah.", "facilities": ["wifi", "kolam_renang", "restoran", "parkir"] }`                 | None              |
+| `/hotels`                               | GET    | Superadmin               | Show all hotels suitable with id              | None                                                                                                                                                                                                                         | `status=denied`, `page=1`, `size=1` |
+| `/hotels/{hotelId}/deny`                | PUT    | Superadmin               | Deny a hotel                                  | `{ "status_reason": "ditolak !" }`                                                                                                                                                                                     | None              |
+| `/hotels/{hotelId}/approve`             | PUT    | Superadmin               | Approve a hotel                               | `{ "status_reason": "diterima !" }`                                                                                                                                                                                    | None              |
+| `/hotels/{hotelId}/register-admin`      | PUT    | Owner                   | Register an admin for the hotel               | `{ "admin": [{ "id": 5, "name": "Admin User", "email": "admin@example.com" }] }`                                                                                                                                               | None              |
+| `/hotels/{hotelId}/register-staff`      | PUT    | Admin                   | Register a staff member for the hotel         | `{ "staff": [{ "id": 3, "name": "Staff", "email": "staff@staff.com" }] }`                                                                                                                                                    | None              |
+
+<h3>Room Management</h3>
+
+| **Endpoint**                  | **Method** | **Authentication Required** | **Description**                                 | **Request Body**                                                                                                                                                     | **Query Parameters**              |
+|-------------------------------|------------|-----------------------------|-------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
+| `/rooms`                       | POST       | Staff        | Add a new room to the hotel                     | ```{"hotel_id": 1,"room_number": "1012","room_name": "Deluxe Room","capacity": 2,"price_per_night": 750000,"status": "available"}``` | None                              |
+| `/rooms/hotel/{hotel_id}`      | GET        | Staff         | Show rooms for a specific hotel                 | None                                                                                                                                                                 | None    |
+| `/rooms/{room_id}`             | PUT        | Staff         | Edit the details of an existing room            | ```{"room_name": "Deluxe Room 80","price_per_night": 80000}```                                                                                   | None                              |
+
+<h3>Reservation Management</h3>
+
+| **Endpoint**                    | **Method** | **Authentication Required** | **Description**                                 | **Request Body**                                                                                                                                                        | **Query Parameters**              |
+|----------------------------------|------------|-----------------------------|-------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
+| `/reservations`                  | POST       | Staff         | Add a new reservation for a room                | { "hotel_id": 1, "room_id": 1, "customer_name": "John Doe", "customer_email": "john.doe@example.com", "check_in": "2024-12-01 14:00:00", "check_out": "2024-12-05 12:00:00", "guest_count": 2, "total_amount": 500.00, "status_payment": "unpaid", "notes": "Late check-in requested" } | None                              |
+| `/reservations`                  | GET        | Staff        | Show reservations by room and hotel ID          | None                                                                                                                                                                  | `hotel_id=1`, `room_id=1`, `page=1`, `size=10` |
+| `/reservations/{reservation_id}` | PUT        | Staff        | Edit the reservation details by its ID          | { "status_payment": "partial", "notes": "Customer has pay 30%" }                                                                                                 | None                              |
+
 ---
 
 <h2>🛠️ Installation Steps </h2>
