@@ -34,7 +34,7 @@ The **Hotely - Webservice API** is a comprehensive REST API built to manage hote
 
 ---
   
-<h2>🛠️ Installation Steps :</h2>
+<h2>🛠️ Installation Steps </h2>
 
 <p>1. Clone Repository</p>
 
@@ -94,6 +94,13 @@ php artisan migrate:fresh
 ```
 php artisan db:seed --class=SuperadminSeeder   
 ```
+
+<br />
+
+> [!NOTE]
+> Information in command:
+> * Superadmin account initialized (email: superadmin@superadmin.com, pass: password123)
+
 
 <br />
 <p>6. Run Project for Development</p>
