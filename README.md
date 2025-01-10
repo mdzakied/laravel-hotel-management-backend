@@ -16,6 +16,7 @@ The **Hotely - Webservice API** is a comprehensive REST API built to manage hote
 - **Customer Management 👤:** Handle customer data and interactions.
 - **Role-Based Access Control 🔐:** Secure user roles and permissions with Laravel Sanctum.
 - **Secure Authentication & Authorization 🔑:** Ensure safe access control for different user roles.
+- **Testing with Postman 🧪:** Validate API functionality and ensure smooth integration.
 
 ---
 
